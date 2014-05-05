@@ -1,0 +1,9 @@
+﻿<UserControl x:Class="TheseColorsDontRun.View.Workspaces.Components.VerticalRamp"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Slider Background="{Binding Path=Brush, UpdateSourceTrigger=PropertyChanged}" 
+                Margin="2" 
+                Orientation="Vertical" 
+                Value="{Binding Path=Offset, UpdateSourceTrigger=PropertyChanged}">
+    </Slider>
+</UserControl>

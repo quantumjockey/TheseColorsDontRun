@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TheseColorsDontRun.View.Workspaces
+namespace TheseColorsDontRun.View.Workspaces.Components
 {
     /// <summary>
-    /// Interaction logic for ColorRampWorkspace.xaml
+    /// Interaction logic for HorizontalRamp.xaml
     /// </summary>
-    public partial class ColorRampWorkspace : UserControl
+    public partial class HorizontalRamp : UserControl
     {
-        public ColorRampWorkspace()
+        public HorizontalRamp()
         {
             InitializeComponent();
         }

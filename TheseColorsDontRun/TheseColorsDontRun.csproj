@@ -56,8 +56,14 @@
     <Compile Include="View\Workspaces\AdjustableChannelColorRampWorkspace.xaml.cs">
       <DependentUpon>AdjustableChannelColorRampWorkspace.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Workspaces\ColorRampWorkspace.xaml.cs">
-      <DependentUpon>ColorRampWorkspace.xaml</DependentUpon>
+    <Compile Include="View\Workspaces\Components\HorizontalRamp.xaml.cs">
+      <DependentUpon>HorizontalRamp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Workspaces\Components\VerticalRamp.xaml.cs">
+      <DependentUpon>VerticalRamp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Workspaces\Components\WideVerticalRamp.xaml.cs">
+      <DependentUpon>WideVerticalRamp.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Workspaces\HorizontalColorRampWorkspace.xaml.cs">
       <DependentUpon>HorizontalColorRampWorkspace.xaml</DependentUpon>
@@ -77,7 +83,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Workspaces\ColorRampWorkspace.xaml">
+    <Page Include="View\Workspaces\Components\HorizontalRamp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Workspaces\Components\VerticalRamp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Workspaces\Components\WideVerticalRamp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
