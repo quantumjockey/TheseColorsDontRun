@@ -88,6 +88,21 @@ namespace TheseColorsDontRun.ViewModel.Workspaces
         #endregion
 
         ////////////////////////////////////////
+        #region Public Methods
+
+        /// <summary>
+        /// Changes the ramp gradient with the specified channel maxima;
+        /// </summary>
+        /// <param name="rampHues">An array of colors that will be used to construct the ramp.</param>
+        public override void ChangeRampGradient(Color[] rampHues)
+        {
+            _rampHues = rampHues;
+            Refresh(R.MaxValue, G.MaxValue, B.MaxValue);
+        }
+
+        #endregion
+
+        ////////////////////////////////////////
         #region Events
 
         void ChannelLimit_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)

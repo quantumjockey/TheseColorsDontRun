@@ -15,6 +15,55 @@ namespace TheseColorsDontRun.Extensions
         ////////////////////////////////////////
         #region Public Methods
 
+        /// <summary>
+        /// Creates a new color ramp from the inputted values.
+        /// </summary>
+        /// <param name="gradient">The GradientStopCollection this is attached to.</param>
+        /// <param name="isDynamic">Indicates whether or not offsets for each stop change with the primary offset.</param>
+        /// <param name="offset">The primary offset for tracking gradients on the color ramp this collection represents.</param>
+        /// <param name="rampHues">The colors used to construct the ramp.</param>
+        /// <param name="maxR">The maximum byte value for the red channel.</param>
+        /// <param name="maxB">The maximum byte value for the blue channel.</param>
+        /// <param name="maxG">The maximum byte value for the green channel.</param>
+        /// <returns>The attached GradientStopCollection with new colors and offsets.</returns>
+        public static GradientStopCollection CreateColorRamp(this GradientStopCollection gradient, bool isDynamic, double offset, Color[] rampHues, byte maxR, byte maxB, byte maxG)
+        {
+            double adjOffset = offset / 10.0;
+            int totalStops = rampHues.Length;
+
+            double stopOffset;
+
+            if (gradient != null)
+            {
+                gradient.Clear();
+            }
+            else
+            {
+                gradient = new GradientStopCollection();
+            }
+
+            for (int i = 0; i < totalStops; i++)
+            {
+                Color color = Color.FromRgb(
+                    (rampHues[i].R < maxR) ? rampHues[i].R : maxR,
+                    (rampHues[i].G < maxR) ? rampHues[i].G : maxG,
+                    (rampHues[i].B < maxR) ? rampHues[i].B : maxB
+                    );
+
+                if (isDynamic)
+                {
+                    stopOffset = (double)i * (1.0 / totalStops) * adjOffset * (totalStops / 2.0);
+                }
+                else
+                {
+                    stopOffset = (double)i * (1.0 / totalStops);
+                }
+
+                gradient.Add(new GradientStop(color, stopOffset));
+            }
+
+            return gradient;
+        }
 
         /// <summary>
         /// Retrieves the color that most closely represents what would be found on the scale offset.

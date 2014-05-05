@@ -13,7 +13,7 @@ using WpfHelper.ViewModel.Workspaces;
 
 namespace TheseColorsDontRun.ViewModel.Workspaces
 {
-    public abstract class ColorRampWorkspaceViewModel : WorkspaceViewModel
+    public class ColorRampWorkspaceViewModel : WorkspaceViewModel
     {
         ////////////////////////////////////////
         #region Generic Fields
@@ -23,7 +23,7 @@ namespace TheseColorsDontRun.ViewModel.Workspaces
         private bool _isDynamic;
         protected double _offset;
         private GradientStopCollection _ramp;
-        private Color[] _rampHues;
+        protected Color[] _rampHues;
 
         #endregion
 
@@ -105,51 +105,25 @@ namespace TheseColorsDontRun.ViewModel.Workspaces
         #region Public Methods
 
         /// <summary>
+        /// Changes the ramp gradient.
+        /// </summary>
+        /// <param name="rampHues">An array of colors that will be used to construct the ramp.</param>
+        public virtual void ChangeRampGradient(Color[] rampHues)
+        {
+            _rampHues = rampHues;
+            Refresh(255, 255, 255);
+        }
+
+        /// <summary>
         /// Refresh the contents of the color ramp based on the channel maxima.
         /// </summary>
         public void Refresh(byte maxR, byte maxB, byte maxG)
         {
             if (Offset != 0)
             {
-                Ramp = CreateColorRamp(Offset, maxR, maxB, maxG);
+                Ramp = Ramp.CreateColorRamp(_isDynamic, Offset, _rampHues, maxR, maxB, maxG);
                 Brush = Brush.Refresh(Ramp);
             }
-        }
-
-        #endregion
-
-        ////////////////////////////////////////
-        #region Supporting Methods
-
-        private GradientStopCollection CreateColorRamp(double sliderControlOffset, byte maxR, byte maxB, byte maxG)
-        {
-            double adjOffset = sliderControlOffset / 10.0;
-            int totalStops = _rampHues.Length;
-
-            double stopOffset;
-
-            GradientStop[] stops = new GradientStop[totalStops];
-            for (int i = 0; i < totalStops; i++)
-            {
-                Color color = Color.FromRgb(
-                    (_rampHues[i].R < maxR) ? _rampHues[i].R : maxR,
-                    (_rampHues[i].G < maxR) ? _rampHues[i].G : maxG,
-                    (_rampHues[i].B < maxR) ? _rampHues[i].B : maxB
-                    );
-
-                if (_isDynamic)
-                {
-                    stopOffset = (double)i * (1.0 / totalStops) * adjOffset * (totalStops / 2.0);
-                }
-                else
-                {
-                    stopOffset = (double)i * (1.0 / totalStops);
-                }
-
-                stops[i] = new GradientStop(color, stopOffset);
-            }
-
-            return new GradientStopCollection(stops);
         }
 
         #endregion

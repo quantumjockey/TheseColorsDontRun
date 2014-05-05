@@ -50,12 +50,26 @@
     <Compile Include="ViewModel\Workspaces\AdjustableChannelColorRampWorkspaceViewModel.cs" />
     <Compile Include="ViewModel\Workspaces\ColorChannelLimiterWorkspaceViewModel.cs" />
     <Compile Include="ViewModel\Workspaces\ColorRampWorkspaceViewModel.cs" />
+    <Compile Include="ViewModel\Workspaces\HueToTransparencyColorRampWorkspaceViewModel.cs" />
     <Compile Include="ViewModel\Workspaces\RgbLimiterWorkspaceViewModel.cs" />
+    <Compile Include="ViewModel\Workspaces\SingleHueColorRampWorkspaceViewModel.cs" />
     <Compile Include="View\Workspaces\AdjustableChannelColorRampWorkspace.xaml.cs">
       <DependentUpon>AdjustableChannelColorRampWorkspace.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Workspaces\ColorRampWorkspace.xaml.cs">
+      <DependentUpon>ColorRampWorkspace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Workspaces\HorizontalColorRampWorkspace.xaml.cs">
+      <DependentUpon>HorizontalColorRampWorkspace.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Workspaces\RgbLimiterWorkspace.xaml.cs">
       <DependentUpon>RgbLimiterWorkspace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Workspaces\VerticalColorRampWorkspace.xaml.cs">
+      <DependentUpon>VerticalColorRampWorkspace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Workspaces\WideVerticalColorRampWorkspace.xaml.cs">
+      <DependentUpon>WideVerticalColorRampWorkspace.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -63,7 +77,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Workspaces\ColorRampWorkspace.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Workspaces\HorizontalColorRampWorkspace.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Workspaces\RgbLimiterWorkspace.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Workspaces\VerticalColorRampWorkspace.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Workspaces\WideVerticalColorRampWorkspace.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
