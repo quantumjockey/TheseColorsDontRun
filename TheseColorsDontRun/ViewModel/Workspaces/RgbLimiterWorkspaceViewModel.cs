@@ -19,101 +19,22 @@ namespace TheseColorsDontRun.ViewModel.Workspaces
         #endregion
 
         ////////////////////////////////////////
-        #region Generic Fields
-
-        // Channel-related
-        private int _maxBlueChannel;
-        private int _maxGreenChannel;
-        private int _maxRedChannel;
-        private double _scaleForBlueChannel;
-        private double _scaleForGreenChannel;
-        private double _scaleForRedChannel;
-
-        #endregion
-
-        ////////////////////////////////////////
         #region Channel-Related
 
-        public int MaxBlueChannel
-        {
-            get
-            {
-                return _maxBlueChannel;
-            }
-            set
-            {
-                _maxBlueChannel = value;
-                OnPropertyChanged("MaxBlueChannel");
-            }
-        }
+        /// <summary>
+        /// Indicates the maximum red channel byte value. (Range: 0-255)
+        /// </summary>
+        public ColorChannelLimiterWorkspaceViewModel R { get; set; }
 
-        public int MaxGreenChannel
-        {
-            get
-            {
-                return _maxGreenChannel;
-            }
-            set
-            {
-                _maxGreenChannel = value;
-                OnPropertyChanged("MaxGreenChannel");
-            }
-        }
+        /// <summary>
+        /// Indicates the maximum green channel byte value. (Range: 0-255)
+        /// </summary>
+        public ColorChannelLimiterWorkspaceViewModel G { get; set; }
 
-        public int MaxRedChannel
-        {
-            get
-            {
-                return _maxRedChannel;
-            }
-            set
-            {
-                _maxRedChannel = value;
-                OnPropertyChanged("MaxRedChannel");
-            }
-        }
-
-        public double ScaleForBlueChannel
-        {
-            get
-            {
-                return _scaleForBlueChannel;
-            }
-            set
-            {
-                _scaleForBlueChannel = value;
-                MaxBlueChannel = ScaleMaxChannelValue(value, _maxRgbValue);
-                OnPropertyChanged("ScaleForBlueChannel");
-            }
-        }
-
-        public double ScaleForGreenChannel
-        {
-            get
-            {
-                return _scaleForGreenChannel;
-            }
-            set
-            {
-                _scaleForGreenChannel = value;
-                MaxGreenChannel = ScaleMaxChannelValue(value, _maxRgbValue);
-                OnPropertyChanged("ScaleForGreenChannel");
-            }
-        }
-
-        public double ScaleForRedChannel
-        {
-            get
-            {
-                return _scaleForRedChannel;
-            }
-            set
-            {
-                _scaleForRedChannel = value;
-                MaxRedChannel = ScaleMaxChannelValue(value, _maxRgbValue);
-                OnPropertyChanged("ScaleForRedChannel");
-            }
-        }
+        /// <summary>
+        /// Indicates the maximum blue channel byte value. (Range: 0-255)
+        /// </summary>
+        public ColorChannelLimiterWorkspaceViewModel B { get; set; }
 
         #endregion
 
@@ -121,21 +42,15 @@ namespace TheseColorsDontRun.ViewModel.Workspaces
         #region Constructor
 
         /// <summary>
-        /// 
+        /// Creates a new workspace for adjusting RGB color values.
         /// </summary>
         public RgbLimiterWorkspaceViewModel()
         {
-            ScaleForRedChannel = ScaleForGreenChannel = ScaleForBlueChannel = 10.0;
-        }
+            R = new ColorChannelLimiterWorkspaceViewModel();
+            G = new ColorChannelLimiterWorkspaceViewModel();
+            B = new ColorChannelLimiterWorkspaceViewModel();
 
-        #endregion
-
-        ////////////////////////////////////////
-        #region Supporting Methods
-
-        private int ScaleMaxChannelValue(double _value, int _maxChannelValue)
-        {
-            return (int)((_value / 10.0) * _maxChannelValue);
+            R.Offset = G.Offset = B.Offset = 10;
         }
 
         #endregion

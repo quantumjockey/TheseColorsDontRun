@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace TheseColorsDontRun.View.Workspaces
 {
     /// <summary>
-    /// Interaction logic for ColorRampWorkspace.xaml
+    /// Interaction logic for AdjustableChannelColorRampWorkspace.xaml
     /// </summary>
-    public partial class ColorRampWorkspace : UserControl
+    public partial class AdjustableChannelColorRampWorkspace : UserControl
     {
-        public ColorRampWorkspace()
+        public AdjustableChannelColorRampWorkspace()
         {
             InitializeComponent();
         }

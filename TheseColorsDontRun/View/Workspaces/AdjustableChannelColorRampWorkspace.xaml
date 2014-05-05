@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="TheseColorsDontRun.View.Workspaces.AdjustableChannelColorRampWorkspace"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Border Background="White" BorderBrush="Gray" BorderThickness="2" Height="404">
+        <StackPanel Orientation="Horizontal" Height="400">
+            <Slider Background="{Binding Path=Brush, UpdateSourceTrigger=PropertyChanged}" 
+                    Orientation="Vertical" 
+                    Margin="2" Value="{Binding Path=Offset, UpdateSourceTrigger=PropertyChanged}">
+                <Slider.LayoutTransform>
+                    <ScaleTransform ScaleX="4"/>
+                </Slider.LayoutTransform>
+            </Slider>
+            <StackPanel Orientation="Horizontal" Height="400">
+                <Slider Margin="2" Orientation="Vertical" Value="{Binding Path=R.Offset, UpdateSourceTrigger=PropertyChanged}">
+                    <Slider.Background>
+                        <LinearGradientBrush>
+                            <GradientStopCollection>
+                                <GradientStop Color="Red" Offset="0"/>
+                                <GradientStop Color="Black" Offset="1"/>
+                            </GradientStopCollection>
+                        </LinearGradientBrush>
+                    </Slider.Background>
+                </Slider>
+                <Slider Margin="2" Orientation="Vertical" Value="{Binding Path=G.Offset, UpdateSourceTrigger=PropertyChanged}">
+                    <Slider.Background>
+                        <LinearGradientBrush>
+                            <GradientStopCollection>
+                                <GradientStop Color="Green" Offset="0"/>
+                                <GradientStop Color="Black" Offset="1"/>
+                            </GradientStopCollection>
+                        </LinearGradientBrush>
+                    </Slider.Background>
+                </Slider>
+                <Slider Margin="2" Orientation="Vertical" Value="{Binding Path=B.Offset, UpdateSourceTrigger=PropertyChanged}">
+                    <Slider.Background>
+                        <LinearGradientBrush>
+                            <GradientStopCollection>
+                                <GradientStop Color="Blue" Offset="0"/>
+                                <GradientStop Color="Black" Offset="1"/>
+                            </GradientStopCollection>
+                        </LinearGradientBrush>
+                    </Slider.Background>
+                </Slider>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</UserControl>

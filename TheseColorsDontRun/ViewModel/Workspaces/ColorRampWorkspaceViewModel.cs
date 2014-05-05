@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Windows.Media;
+using TheseColorsDontRun.Extensions;
 using WpfHelper.ViewModel.Workspaces;
 
 #endregion
@@ -12,21 +13,26 @@ using WpfHelper.ViewModel.Workspaces;
 
 namespace TheseColorsDontRun.ViewModel.Workspaces
 {
-    public class ColorRampWorkspaceViewModel : WorkspaceViewModel
+    public abstract class ColorRampWorkspaceViewModel : WorkspaceViewModel
     {
         ////////////////////////////////////////
         #region Generic Fields
 
         // Render-specific
         private LinearGradientBrush _brush;
+        private bool _isDynamic;
+        protected double _offset;
         private GradientStopCollection _ramp;
-        private double _sliderValue;
+        private Color[] _rampHues;
 
         #endregion
 
         ////////////////////////////////////////
         #region Properties
 
+        /// <summary>
+        /// Object for painting ramp gradients on interface controls.
+        /// </summary>
         public LinearGradientBrush Brush
         {
             get
@@ -40,6 +46,29 @@ namespace TheseColorsDontRun.ViewModel.Workspaces
             }
         }
 
+        /// <summary>
+        /// Indicates and/or selects the offset from one end of the ramp to the other. (Range: 0-10)
+        /// </summary>
+        /// <remarks>
+        /// The range of values for this member are set between 0 and 10 for data-binding compatibility with WPF slider controls.
+        /// </remarks>
+        public virtual double Offset
+        {
+            get
+            {
+                return _offset;
+            }
+            set
+            {
+                _offset = value;
+                Refresh(255, 255, 255);
+                OnPropertyChanged("Offset");
+            }
+        }
+
+        /// <summary>
+        /// Contains the range of color gradients that can be selected from.
+        /// </summary>
         public GradientStopCollection Ramp
         {
             get
@@ -53,28 +82,21 @@ namespace TheseColorsDontRun.ViewModel.Workspaces
             }
         }
 
-        public double SliderValue
-        {
-            get
-            {
-                return _sliderValue;
-            }
-            set
-            {
-                _sliderValue = value;
-                Refresh();
-                OnPropertyChanged("SliderValue");
-            }
-        }
-
         #endregion
 
         ////////////////////////////////////////
         #region Constructor
 
-        public ColorRampWorkspaceViewModel()
+        /// <summary>
+        /// Creates a new Color Ramp with fixed channel maxima.
+        /// </summary>
+        /// <param name="isDynamic">Indicates wther or not gradients on the ramp change with the offset.</param>
+        /// <param name="rampHues">An array containing the colors for each gradient stop on the color ramp.</param>
+        public ColorRampWorkspaceViewModel(bool isDynamic, Color[] rampHues)
         {
-            SliderValue = 5;
+            _isDynamic = isDynamic;
+            _rampHues = rampHues;
+            Offset = 5;
         }
 
         #endregion
@@ -83,53 +105,15 @@ namespace TheseColorsDontRun.ViewModel.Workspaces
         #region Public Methods
 
         /// <summary>
-        /// 
+        /// Refresh the contents of the color ramp based on the channel maxima.
         /// </summary>
-        /// <param name="ramp"></param>
-        /// <param name="offset"></param>
-        /// <param name="maxR"></param>
-        /// <param name="maxG"></param>
-        /// <param name="maxB"></param>
-        /// <param name="alphaEnabled"></param>
-        /// <returns></returns>
-        public Color GetRelativeColor(GradientStopCollection ramp, double offset, int maxR, int maxG, int maxB, bool alphaEnabled)
+        public void Refresh(byte maxR, byte maxB, byte maxG)
         {
-            double startBoundaryOffset = 0.0;
-            double finishBoundaryOffset = 1.0;
-
-            GradientStop startBoundary = new GradientStop();
-            GradientStop finishBoundary = new GradientStop();
-
-            foreach (GradientStop boundary in ramp)
+            if (Offset != 0)
             {
-                if (boundary.Offset <= offset && boundary.Offset > startBoundaryOffset)
-                {
-                    startBoundary = boundary;
-                }
-                if (boundary.Offset > offset && boundary.Offset <= finishBoundaryOffset)
-                {
-                    finishBoundary = boundary;
-                    break;
-                }
+                Ramp = CreateColorRamp(Offset, maxR, maxB, maxG);
+                Brush = Brush.Refresh(Ramp);
             }
-
-            var color = Color.FromScRgb(
-                (alphaEnabled) ? CalculateChannelValue(startBoundary, finishBoundary, "ScA", offset, 255) : (float)1.0,
-                CalculateChannelValue(startBoundary, finishBoundary, "ScR", offset, maxR),
-                CalculateChannelValue(startBoundary, finishBoundary, "ScG", offset, maxG),
-                CalculateChannelValue(startBoundary, finishBoundary, "ScB", offset, maxB)
-                );
-
-            return color;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public void Refresh()
-        {
-            Ramp = CreateColorRamp(SliderValue);
-            Brush = RefreshBrush(Brush);
         }
 
         #endregion
@@ -137,100 +121,35 @@ namespace TheseColorsDontRun.ViewModel.Workspaces
         ////////////////////////////////////////
         #region Supporting Methods
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        private GradientStopCollection CreateColorRamp(double offset)
+        private GradientStopCollection CreateColorRamp(double sliderControlOffset, byte maxR, byte maxB, byte maxG)
         {
-            double stopOne, stopTwo, stopThree, stopFour;
+            double adjOffset = sliderControlOffset / 10.0;
+            int totalStops = _rampHues.Length;
 
-            stopOne = 0.0;
-            stopFour = 1.0;
-            stopTwo = (offset / 10.0) * 0.5;
-            stopThree = 1.0 - stopTwo;
+            double stopOffset;
 
-            List<GradientStop> stops = new List<GradientStop>();
-            stops.Add(new GradientStop(Colors.White, stopOne));
-            stops.Add(new GradientStop(Colors.Blue, stopTwo));
-            stops.Add(new GradientStop(Colors.Red, stopThree));
-            stops.Add(new GradientStop(Colors.Yellow, stopFour));
-            return new GradientStopCollection(stops);
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="brush"></param>
-        /// <returns></returns>
-        private LinearGradientBrush RefreshBrush(LinearGradientBrush brush)
-        {
-            if (brush == null)
+            GradientStop[] stops = new GradientStop[totalStops];
+            for (int i = 0; i < totalStops; i++)
             {
-                brush = new LinearGradientBrush();
-            }
-            brush.GradientStops.Clear();
-            foreach (GradientStop item in _ramp)
-            {
-                brush.GradientStops.Add(item);
-            }
-            brush.StartPoint = new System.Windows.Point(0, 1);
-            brush.EndPoint = new System.Windows.Point(0, 0);
-            return brush;
-        }
+                Color color = Color.FromRgb(
+                    (_rampHues[i].R < maxR) ? _rampHues[i].R : maxR,
+                    (_rampHues[i].G < maxR) ? _rampHues[i].G : maxG,
+                    (_rampHues[i].B < maxR) ? _rampHues[i].B : maxB
+                    );
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="_before"></param>
-        /// <param name="_after"></param>
-        /// <param name="_colorComponent"></param>
-        /// <param name="_offset"></param>
-        /// <param name="_maxValue"></param>
-        /// <returns></returns>
-        private float CalculateChannelValue(GradientStop _before, GradientStop _after, string _colorComponent, double _offset, int _maxValue)
-        {
-            double afterOffset = _after.Offset;
-            double beforeOffset = _before.Offset;
-
-            float max = (float)_maxValue / (float)255;
-
-            float afterColorChannelValue = GetScRgbChannelValue(_after.Color, _colorComponent);
-            float beforeColorChannelValue = GetScRgbChannelValue(_before.Color, _colorComponent);
-
-            double scaleFactor = (_offset - beforeOffset) / (afterOffset - beforeOffset);
-
-            double channelRange = afterColorChannelValue - beforeColorChannelValue;
-
-            float newChannel = (float)(scaleFactor * channelRange);
-
-            float result = (float)(newChannel + beforeColorChannelValue);
-
-            return (result < max) ? result : max;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="_color"></param>
-        /// <param name="_channelName"></param>
-        /// <returns></returns>
-        private float GetScRgbChannelValue(Color _color, string _channelName)
-        {
-            float channelValue = (float)0.0;
-
-            PropertyInfo[] properties = (typeof(Color)).GetProperties();
-
-            for (int i = 0; i < properties.Length; i++)
-            {
-                if (properties[i].Name == _channelName)
+                if (_isDynamic)
                 {
-                    channelValue = (float)properties[i].GetValue(_color, null);
-                    break;
+                    stopOffset = (double)i * (1.0 / totalStops) * adjOffset * (totalStops / 2.0);
                 }
+                else
+                {
+                    stopOffset = (double)i * (1.0 / totalStops);
+                }
+
+                stops[i] = new GradientStop(color, stopOffset);
             }
 
-            return channelValue;
+            return new GradientStopCollection(stops);
         }
 
         #endregion
