@@ -12,13 +12,6 @@ namespace TheseColorsDontRun.ViewModel.Workspaces
     public class RgbLimiterWorkspaceViewModel : WorkspaceViewModel
     {
         ////////////////////////////////////////
-        #region Constants
-
-        const int _maxRgbValue = 255;
-
-        #endregion
-
-        ////////////////////////////////////////
         #region Channel-Related
 
         /// <summary>

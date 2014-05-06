@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="GradientStopCollectionExtensions">
+  <logicalClassDesignerModelMoniker Id="8bf27027-b23f-4e72-a073-f6a6c9bdf1b7" />
+  <nestedChildShapes>
+    <classShape Id="26847967-bfbe-468a-a433-f4add1ed692b" absoluteBounds="3.5, 3, 3.5, 1.2226562251647311" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="292cc34b-b084-49d5-b08f-3af16ca77bee" LastKnownName="GradientStopCollectionExtensions" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="df7cb953-de76-4113-a3b8-0af800d8e807" absoluteBounds="3.515, 3.39, 3.4699999999999998, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="85eb5743-878f-4f94-82f8-b8de1a221299" absoluteBounds="3.515, 3.6011718675494193, 3.4699999999999998, 0.521484357615312" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

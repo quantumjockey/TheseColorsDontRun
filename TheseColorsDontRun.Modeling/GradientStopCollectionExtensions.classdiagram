@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="8bf27027-b23f-4e72-a073-f6a6c9bdf1b7" name="GradientStopCollectionExtensions" linkedPackageId="e9a90a04-f31c-4aa7-8b3a-2aed3f638720" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="97f9de73-3919-43d3-a356-640bda238783">
+      <profileInstance Id="96541828-e07e-425c-87ac-24abd4de58dd" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="57aa9fd5-a9c0-4663-9fe2-b9d30af940f6">
+      <profileInstance Id="b71e3988-e6bc-4e07-8d39-f2bbfab539e3" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="292cc34b-b084-49d5-b08f-3af16ca77bee" name="GradientStopCollectionExtensions" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8d6ad730-6d8d-42ca-83dc-a558ae9fa3e7" />
+        <ownedOperationsInternal>
+          <operation Id="0403290f-8e25-49bf-a8dc-511966550bf4" name="CreateColorRamp" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e8e6aaae-a3bc-47de-a1be-7ad950398739" />
+          </operation>
+          <operation Id="79ed81c3-f6db-4869-8515-017a4cc57cdc" name="MatchOffsetToColor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6bc8c256-7d1f-4d98-b69d-3e2f43550172" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="e9a90a04-f31c-4aa7-8b3a-2aed3f638720" name="TheseColorsDontRun.Modeling">
+    <elementDefinition Id="8428d30f-8159-48e8-a178-a1f0d12b9f18" />
+  </package>
+</logicalClassDesignerModel>

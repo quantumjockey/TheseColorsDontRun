@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="779754f2-42b2-4e65-9230-b6720f4cf938" name="LinearGradientBrushExtensions" linkedPackageId="f132367e-0b05-493a-918a-66ec20fe3018" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="77151d95-d052-4841-99f1-635cd8a0ae61">
+      <profileInstance Id="757dc097-c67e-4461-bff8-349e0a5c8665" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="dc571944-7fa7-4463-8e6c-e9aa6c94fdca">
+      <profileInstance Id="66f34e24-51fb-46d8-85c1-a80ec8823080" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a81f335e-581c-47f3-85e3-652c354a104c" name="LinearGradientBrushExtensions" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="be373f13-1503-4507-a229-04403bcb3a90" />
+        <ownedOperationsInternal>
+          <operation Id="07b2a1f8-abb1-4400-814a-a769604cc8af" name="Refresh" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a4e03bf7-fc25-4c0d-80aa-ec5d76d0612a" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="f132367e-0b05-493a-918a-66ec20fe3018" name="TheseColorsDontRun.Modeling">
+    <elementDefinition Id="8428d30f-8159-48e8-a178-a1f0d12b9f18" />
+  </package>
+</logicalClassDesignerModel>

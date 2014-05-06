@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ColorRampWorkspaceViewModel">
+  <logicalClassDesignerModelMoniker Id="7b6f057f-e5aa-4c9c-98bc-29efaf67cee4" />
+  <nestedChildShapes>
+    <classShape Id="64fa31ad-5ac6-44ff-861f-e6585ee685e5" absoluteBounds="2.375, 3, 4.75, 1.7031249602635699" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="01ee07c5-d1df-46a7-bf1d-5b3b1a584fa8" LastKnownName="ColorRampWorkspaceViewModel" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="4fd854cc-e27d-4423-8e1a-9fc513e37699" absoluteBounds="2.39, 3.39, 4.7200000000000006, 0.68164060264825832" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="07f07b55-c07f-4b78-86a2-9b0d16a97006" absoluteBounds="2.39, 4.0816406026482586, 4.7200000000000006, 0.52148435761531187" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

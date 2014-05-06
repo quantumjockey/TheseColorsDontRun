@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="7b6f057f-e5aa-4c9c-98bc-29efaf67cee4" name="ColorRampWorkspaceViewModel" linkedPackageId="e47f7a6f-5f35-48df-ae12-1eb3147e825d" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="1ca69522-8d18-4dfa-937f-f7053a2c2a3c">
+      <profileInstance Id="dcb2e2d5-db90-45c6-83c7-e23f80417fb3" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="327fc49e-93f8-43d4-a023-bd2d7ae429d8">
+      <profileInstance Id="edda70ad-5cd0-4979-ac04-902fc441a9f0" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="01ee07c5-d1df-46a7-bf1d-5b3b1a584fa8" name="ColorRampWorkspaceViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fc89310a-5887-475e-b935-67d8d679d4d3" />
+        <ownedAttributesInternal>
+          <property Id="8da135a0-bfd6-437d-87e5-c7fbac5bc04d" name="Brush" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="251002d8-3056-494c-9b69-06e4cac909bb" />
+          </property>
+          <property Id="b69b1d60-1973-4c92-8027-54dd86e92637" name="Offset" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f95250e0-16f5-4eac-8a6a-0ee8544e8fc2" />
+          </property>
+          <property Id="391f73e8-db1f-4841-a4ea-03f14c2ba621" name="Ramp" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f5d928d4-d03d-4ed9-96bb-6afa3e97d4a4" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="dcce17c8-da82-492f-b1f4-50f823ead7c7" name="ChangeRampGradient" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="72081e63-58df-484a-afa3-835e5438373a" />
+          </operation>
+          <operation Id="fa74e7ee-2e47-41e7-bdc7-312fab9c4cbd" name="Refresh" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="660b8323-66b1-45ea-a0b5-008ffdaac5b1" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="e47f7a6f-5f35-48df-ae12-1eb3147e825d" name="TheseColorsDontRun.Modeling">
+    <elementDefinition Id="8428d30f-8159-48e8-a178-a1f0d12b9f18" />
+  </package>
+</logicalClassDesignerModel>

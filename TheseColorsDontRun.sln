@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheseColorsDontRun", "These
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfHelper", "..\WpfHelper\WpfHelper\WpfHelper.csproj", "{473A9DEF-8948-42A0-B127-AAB5BCBC5790}"
 EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "TheseColorsDontRun.Modeling", "TheseColorsDontRun.Modeling\TheseColorsDontRun.Modeling.modelproj", "{C9E26944-E0A8-4E7C-824D-FBEE290005EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{473A9DEF-8948-42A0-B127-AAB5BCBC5790}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{473A9DEF-8948-42A0-B127-AAB5BCBC5790}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{473A9DEF-8948-42A0-B127-AAB5BCBC5790}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9E26944-E0A8-4E7C-824D-FBEE290005EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9E26944-E0A8-4E7C-824D-FBEE290005EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9E26944-E0A8-4E7C-824D-FBEE290005EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9E26944-E0A8-4E7C-824D-FBEE290005EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

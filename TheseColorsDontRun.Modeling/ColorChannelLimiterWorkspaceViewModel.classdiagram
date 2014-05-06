@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="bf5c438f-6137-4827-b807-ff70ec00f49f" name="ColorChannelLimiterWorkspaceViewModel" linkedPackageId="f8842f45-3f91-4642-ac65-c4f09f7e2ad4" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="aaec50a1-b85a-45f8-b88a-ea972ba88545">
+      <profileInstance Id="ce329d34-74eb-4e16-8ac0-6d75343f9059" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="98a6ae1d-afd3-471a-9fdc-46d555da901b">
+      <profileInstance Id="7a1cc690-3ffa-46d2-b47e-ce04a2889368" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5221365e-f8f5-45a6-8ffe-65670dde9f31" name="ColorChannelLimiterWorkspaceViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4fac9e81-49d0-41d1-92c0-09ea6c42beef" />
+        <ownedAttributesInternal>
+          <property Id="e44d9b19-de71-4cd3-a30d-b882deefbc70" name="MaxValue" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f2e3231d-c8f1-4f86-b840-f5f50acb27e7" />
+          </property>
+          <property Id="9cc971d6-9aad-415c-8560-95bd1f298287" name="Offset" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7a83059f-a38d-4cf5-bd18-6f92d5a6625a" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="f8842f45-3f91-4642-ac65-c4f09f7e2ad4" name="TheseColorsDontRun.Modeling">
+    <elementDefinition Id="8428d30f-8159-48e8-a178-a1f0d12b9f18" />
+  </package>
+</logicalClassDesignerModel>

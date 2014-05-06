@@ -75,7 +75,7 @@ namespace TheseColorsDontRun.Extensions
         /// <param name="maxB">The maximum B-channel value.</param>
         /// <param name="alphaEnabled">Whether or not value-matching for the alpha channel is enabled.</param>
         /// <returns>The color closest to the specified offset on the specified color scale.</returns>
-        public static Color GetRelativeColor(this GradientStopCollection ramp, double offset, int maxR, int maxG, int maxB, bool alphaEnabled)
+        public static Color MatchOffsetToColor(this GradientStopCollection ramp, double offset, int maxR, int maxG, int maxB, bool alphaEnabled)
         {
             double startBoundaryOffset = 0.0;
             double finishBoundaryOffset = 1.0;
