@@ -3,13 +3,14 @@
 
 using System;
 using System.Windows.Media;
+using WpfHelper.ViewModel.Workspaces;
 
 #endregion
 ///////////////////////////////////////
 
 namespace TheseColorsDontRun.ViewModel.Workspaces
 {
-    public interface IColorRampWorkspaceViewModel
+    public interface IColorRampWorkspaceViewModel : IWorkspaceViewModel
     {
         // Property signatures
         LinearGradientBrush Brush { get; set; }
