@@ -13,7 +13,7 @@ using WpfHelper.ViewModel.Workspaces;
 
 namespace TheseColorsDontRun.ViewModel.Workspaces
 {
-    public class ColorRampWorkspaceViewModel : WorkspaceViewModel
+    public class ColorRampWorkspaceViewModel : WorkspaceViewModel, IColorRampWorkspaceViewModel
     {
         ////////////////////////////////////////
         #region Generic Fields

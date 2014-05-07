@@ -51,6 +51,7 @@
     <Compile Include="ViewModel\Workspaces\ColorChannelLimiterWorkspaceViewModel.cs" />
     <Compile Include="ViewModel\Workspaces\ColorRampWorkspaceViewModel.cs" />
     <Compile Include="ViewModel\Workspaces\HueToTransparencyColorRampWorkspaceViewModel.cs" />
+    <Compile Include="ViewModel\Workspaces\IColorRampWorkspaceViewModel.cs" />
     <Compile Include="ViewModel\Workspaces\RgbLimiterWorkspaceViewModel.cs" />
     <Compile Include="ViewModel\Workspaces\SingleHueColorRampWorkspaceViewModel.cs" />
     <Compile Include="View\Workspaces\AdjustableChannelColorRampWorkspace.xaml.cs">
