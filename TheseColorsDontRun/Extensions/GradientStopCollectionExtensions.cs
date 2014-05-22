@@ -1,8 +1,6 @@
 ﻿///////////////////////////////////////
 #region Namespace Directives
 
-using System;
-using System.Reflection;
 using System.Windows.Media;
 
 #endregion

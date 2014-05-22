@@ -1,7 +1,6 @@
 ﻿///////////////////////////////////////
 #region Namespace Directives
 
-using System;
 using WpfHelper.ViewModel.Workspaces;
 
 #endregion

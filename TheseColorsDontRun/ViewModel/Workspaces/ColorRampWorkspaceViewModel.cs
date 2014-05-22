@@ -1,9 +1,6 @@
 ﻿///////////////////////////////////////
 #region Namespace Directives
 
-using System;
-using System.Collections.Generic;
-using System.Reflection;
 using System.Windows.Media;
 using TheseColorsDontRun.Extensions;
 using WpfHelper.ViewModel.Workspaces;
@@ -90,7 +87,7 @@ namespace TheseColorsDontRun.ViewModel.Workspaces
         /// <summary>
         /// Creates a new Color Ramp with fixed channel maxima.
         /// </summary>
-        /// <param name="isDynamic">Indicates wther or not gradients on the ramp change with the offset.</param>
+        /// <param name="isDynamic">Indicates whether or not gradients on the ramp change with the offset.</param>
         /// <param name="rampHues">An array containing the colors for each gradient stop on the color ramp.</param>
         public ColorRampWorkspaceViewModel(bool isDynamic, Color[] rampHues)
         {

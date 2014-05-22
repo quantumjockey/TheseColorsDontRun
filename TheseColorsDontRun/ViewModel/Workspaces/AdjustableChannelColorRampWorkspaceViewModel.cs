@@ -1,12 +1,7 @@
 ﻿///////////////////////////////////////
 #region Namespace Directives
 
-using System;
-using System.Collections.Generic;
-using System.Reflection;
 using System.Windows.Media;
-using TheseColorsDontRun.Extensions;
-using WpfHelper.ViewModel.Workspaces;
 
 #endregion
 ///////////////////////////////////////

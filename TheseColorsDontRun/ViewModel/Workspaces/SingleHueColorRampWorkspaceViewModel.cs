@@ -1,9 +1,7 @@
 ﻿///////////////////////////////////////
 #region Namespace Directives
 
-using System;
 using System.Windows.Media;
-using WpfHelper.ViewModel.Workspaces;
 
 #endregion
 ///////////////////////////////////////
