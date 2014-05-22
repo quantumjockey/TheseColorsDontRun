@@ -58,8 +58,11 @@ namespace TheseColorsDontRun.ViewModel.Workspaces
             set
             {
                 _offset = value;
-                Refresh(255, 255, 255);
-                OnPropertyChanged("Offset");
+                if (_offset >= 1.0 && _offset <= 10.0)
+                {
+                    Refresh(255, 255, 255);
+                    OnPropertyChanged("Offset");
+                }
             }
         }
 
