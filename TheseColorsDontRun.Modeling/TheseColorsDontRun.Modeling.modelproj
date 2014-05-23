@@ -22,63 +22,63 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
-    <Content Include="SingleHueColorRampWorkspaceViewModel.classdiagram">
+    <Content Include="Class Diagrams\AdjustableChannelColorRampWorkspaceViewModel.classdiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="SingleHueColorRampWorkspaceViewModel.classdiagram.layout">
+    <Content Include="Class Diagrams\AdjustableChannelColorRampWorkspaceViewModel.classdiagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>SingleHueColorRampWorkspaceViewModel.classdiagram</DependentUpon>
+      <DependentUpon>Class Diagrams\AdjustableChannelColorRampWorkspaceViewModel.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Class Diagrams\ColorChannelLimiterWorkspaceViewModel.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagrams\ColorChannelLimiterWorkspaceViewModel.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Class Diagrams\ColorChannelLimiterWorkspaceViewModel.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Class Diagrams\ColorExtensions.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagrams\ColorExtensions.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Class Diagrams\ColorExtensions.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Class Diagrams\ColorRampWorkspaceViewModel.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagrams\ColorRampWorkspaceViewModel.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Class Diagrams\ColorRampWorkspaceViewModel.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Class Diagrams\GradientStopCollectionExtensions.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagrams\GradientStopCollectionExtensions.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Class Diagrams\GradientStopCollectionExtensions.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Class Diagrams\HueToTransparencyColorRampWorkspaceViewModel.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagrams\HueToTransparencyColorRampWorkspaceViewModel.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Class Diagrams\HueToTransparencyColorRampWorkspaceViewModel.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Class Diagrams\LinearGradientBrushExtensions.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagrams\LinearGradientBrushExtensions.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Class Diagrams\LinearGradientBrushExtensions.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Class Diagrams\SingleHueColorRampWorkspaceViewModel.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Class Diagrams\SingleHueColorRampWorkspaceViewModel.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Class Diagrams\SingleHueColorRampWorkspaceViewModel.classdiagram</DependentUpon>
     </Content>
     <Folder Include="ModelDefinition\" />
-    <Content Include="AdjustableChannelColorRampWorkspaceViewModel.classdiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="AdjustableChannelColorRampWorkspaceViewModel.classdiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>AdjustableChannelColorRampWorkspaceViewModel.classdiagram</DependentUpon>
-    </Content>
-    <Content Include="ColorChannelLimiterWorkspaceViewModel.classdiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="ColorChannelLimiterWorkspaceViewModel.classdiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>ColorChannelLimiterWorkspaceViewModel.classdiagram</DependentUpon>
-    </Content>
-    <Content Include="ColorExtensions.classdiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="ColorExtensions.classdiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>ColorExtensions.classdiagram</DependentUpon>
-    </Content>
-    <Content Include="ColorRampWorkspaceViewModel.classdiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="ColorRampWorkspaceViewModel.classdiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>ColorRampWorkspaceViewModel.classdiagram</DependentUpon>
-    </Content>
-    <Content Include="GradientStopCollectionExtensions.classdiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="GradientStopCollectionExtensions.classdiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>GradientStopCollectionExtensions.classdiagram</DependentUpon>
-    </Content>
-    <Content Include="HueToTransparencyColorRampWorkspaceViewModel.classdiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="HueToTransparencyColorRampWorkspaceViewModel.classdiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>HueToTransparencyColorRampWorkspaceViewModel.classdiagram</DependentUpon>
-    </Content>
-    <Content Include="LinearGradientBrushExtensions.classdiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="LinearGradientBrushExtensions.classdiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>LinearGradientBrushExtensions.classdiagram</DependentUpon>
-    </Content>
     <Content Include="ModelDefinition\Package1_1650.uml">
       <SubType>Content</SubType>
     </Content>
@@ -91,5 +91,6 @@
     <Content Include="ModelDefinition\TheseColorsDontRun.Modeling.uml">
       <SubType>Content</SubType>
     </Content>
+    <Folder Include="Class Diagrams" />
   </ItemGroup>
 </Project>
