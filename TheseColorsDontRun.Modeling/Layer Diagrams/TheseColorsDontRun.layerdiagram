@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="9c637eed-f767-438d-9f8d-c134c7ac2019" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="44a3b51e-ba8d-4b5b-8260-21d8b598e583" name="WpfHelper">
+      <references>
+        <reference Id="8e7f7fd3-6d29-4304-b50c-99f46c387345" name="WpfHelper">
+          <ArtifactNode Label="WpfHelper" Category="CodeSchema_Project" Id="(Assembly=../../../WpfHelper/WpfHelper/WpfHelper.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=WpfHelper)" Label="WpfHelper.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="8507607d-b6bc-473a-88f1-a3e15d4c6440" name="TheseColorsDontRun">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="cbc2cc50-d802-4f6f-8019-8d49e8470c14" direction="Forward">
+          <layerMoniker Id="44a3b51e-ba8d-4b5b-8260-21d8b598e583" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="cc235037-5f84-4119-93a0-9392b6c1f0f3" name="TheseColorsDontRun">
+          <ArtifactNode Label="TheseColorsDontRun" Category="CodeSchema_Project" Id="(Assembly=../../TheseColorsDontRun/TheseColorsDontRun.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=TheseColorsDontRun)" Label="TheseColorsDontRun.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>

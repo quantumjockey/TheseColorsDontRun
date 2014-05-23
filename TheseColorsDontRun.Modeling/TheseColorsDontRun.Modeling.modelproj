@@ -92,5 +92,29 @@
       <SubType>Content</SubType>
     </Content>
     <Folder Include="Class Diagrams" />
+    <Folder Include="Layer Diagrams" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\WpfHelper\WpfHelper\WpfHelper.csproj">
+      <Name>WpfHelper</Name>
+      <Project>{473a9def-8948-42a0-b127-aab5bcbc5790}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TheseColorsDontRun\TheseColorsDontRun.csproj">
+      <Name>TheseColorsDontRun</Name>
+      <Project>{f6d15a69-9342-463a-82cc-8b5186deac60}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="Layer Diagrams\TheseColorsDontRun.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="Layer Diagrams\TheseColorsDontRun.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Layer Diagrams\TheseColorsDontRun.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="Layer Diagrams\TheseColorsDontRun.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>Layer Diagrams\TheseColorsDontRun.layerdiagram</DependentUpon>
+    </Validate>
   </ItemGroup>
 </Project>
